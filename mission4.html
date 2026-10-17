@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission 4 | Inside Intel</title>
+  <link rel="stylesheet" href="mission4.css">
+  <script src="mission4.js" defer></script>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+
+  <header class="topbar">
+    <a href="index.html" class="back-btn">← Dashboard</a>
+    <div class="brand">BEE <span>×</span> INSIDE INTEL</div>
+    <button id="musicToggle" class="music-btn" type="button">♫ Music: OFF</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MISSION 04 · INTELLIGENCE DIVISION</p>
+        <h1>INSIDE <span>INTEL</span></h1>
+        <h2>Understand People. Create Curiosity. Build Connections.</h2>
+        <p class="hero-text">
+          Every great marketer understands people before selling to them.
+          Discover your audience, identify their hidden desires and build
+          powerful IRBs that make people stop, think and act.
+        </p>
+        <div class="hero-tags">
+          <span>🎯 Ideal Customers</span>
+          <span>🧠 Customer Psychology</span>
+          <span>⚡ IRB Creation</span>
+        </div>
+      </div>
+
+      <div class="character-stage">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="floating-icon icon-a">💡</div>
+        <div class="floating-icon icon-b">🎯</div>
+        <div class="floating-icon icon-c">📊</div>
+        <div class="main-character" aria-label="Animated intelligence agent">
+          <div class="agent-hair"></div>
+          <div class="agent-face">
+            <div class="agent-eyes"><i></i><i></i></div>
+            <div class="agent-brows"><i></i><i></i></div>
+            <div class="agent-nose"></div>
+            <div class="agent-mouth"></div>
+          </div>
+          <div class="agent-neck"></div>
+          <div class="agent-body">
+            <div class="agent-badge">II</div>
+          </div>
+          <div class="agent-arm"></div>
+        </div>
+        <div class="character-caption">AGENT INTEL <span>● ONLINE</span></div>
+      </div>
+    </section>
+
+    <section class="mission-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">YOUR OPERATION</p>
+          <h2>Mission Control</h2>
+        </div>
+        <div class="progress-number"><span id="progressPercent">0</span>%</div>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+      <p id="progressText" class="progress-text">Let's begin, agent. Your answers save automatically.</p>
+      <div class="task-nav">
+        <a href="#irb-check">01 IRB Check</a>
+        <a href="#usage">02 Usage</a>
+        <a href="#customers">03 Customers</a>
+        <a href="#irb-bank">04 IRB Bank</a>
+        <a href="#achievers">05 Achievers</a>
+      </div>
+    </section>
+
+    <form id="missionForm">
+      <section class="task-section" id="irb-check">
+        <div class="section-heading">
+          <div class="section-number">01</div>
+          <div>
+            <p class="eyebrow">OBSERVE THE WORLD</p>
+            <h2>IRB Check</h2>
+            <p>Identify five IRB lines you have seen and the brands using them.</p>
+          </div>
+        </div>
+        <div class="info-note">💡 Write the actual line if you remember it. IRB means an interesting, relevant belief/message that attracts the intended audience.</div>
+        <div id="irbCheckList" class="answer-grid"></div>
+      </section>
+
+      <section class="task-section" id="usage">
+        <div class="section-heading">
+          <div class="section-number">02</div>
+          <div>
+            <p class="eyebrow">YOUR MARKETING HABITS</p>
+            <h2>Your Usage of IRB</h2>
+            <p>Mark where you use IRBs and estimate how often you send them.</p>
+          </div>
+        </div>
+        <div class="usage-layout">
+          <div class="subpanel">
+            <h3>Where do you use IRBs?</h3>
+            <p class="muted">Select every channel that applies.</p>
+            <div id="usageOptions" class="check-grid"></div>
+          </div>
+          <div class="subpanel">
+            <h3>Your monthly activity</h3>
+            <label class="field-label" for="monthlyIRBs">How many IRBs do you send in a month?</label>
+            <input class="text-input" id="monthlyIRBs" name="monthlyIRBs" type="number" min="0" placeholder="e.g. 40">
+            <label class="field-label" for="otherUsage">Anywhere else? Mention it here.</label>
+            <textarea id="otherUsage" name="otherUsage" placeholder="Other channels or methods..."></textarea>
+            <label class="field-label" for="usageFeedback">Your feedback</label>
+            <textarea id="usageFeedback" name="usageFeedback" placeholder="What could you improve?"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="task-section" id="customers">
+        <div class="section-heading">
+          <div class="section-number">03</div>
+          <div>
+            <p class="eyebrow">THINK LIKE YOUR CUSTOMER</p>
+            <h2>Ideal Customer Identification</h2>
+            <p>Create three realistic customer profiles. Be specific and empathetic.</p>
+          </div>
+        </div>
+        <div class="info-note">🧠 Go beyond age and job title. Understand what your customers feel, need, desire and rarely say out loud.</div>
+        <div id="customerProfiles" class="customer-grid"></div>
+      </section>
+
+      <section class="task-section" id="irb-bank">
+        <div class="section-heading">
+          <div class="section-number">04</div>
+          <div>
+            <p class="eyebrow">BUILD YOUR MESSAGE ARSENAL</p>
+            <h2>IRB Bank</h2>
+            <p>Create 25 original IRBs across five marketing categories.</p>
+          </div>
+        </div>
+        <div class="bank-summary">
+          <span>🎬 5 Reel Hooks</span>
+          <span>📣 5 Ad Lines</span>
+          <span>🧲 5 Curiosity Lines</span>
+          <span>🤝 5 SIT Messages</span>
+          <span>🎁 5 Lead Magnets</span>
+        </div>
+        <div id="irbBankList" class="bank-list"></div>
+      </section>
+
+      <section class="task-section" id="achievers">
+        <div class="section-heading">
+          <div class="section-number">05</div>
+          <div>
+            <p class="eyebrow">LEARN FROM REAL PEOPLE</p>
+            <h2>Learning from Achievers</h2>
+            <p>Watch one story from BEE's “Real People, Real Stories Series”.</p>
+          </div>
+        </div>
+        <div class="subpanel achiever-panel">
+          <label class="field-label" for="achieverName">Whose success story did you watch this week?</label>
+          <input class="text-input" id="achieverName" name="achieverName" placeholder="Speaker's name">
+          <label class="field-label" for="achieverTakeaways">What are your top takeaways?</label>
+          <textarea id="achieverTakeaways" name="achieverTakeaways" placeholder="Write the most useful lessons you learned..."></textarea>
+          <label class="field-label" for="youtubeLink">YouTube video link (optional)</label>
+          <input class="text-input" id="youtubeLink" name="youtubeLink" type="url" placeholder="https://www.youtube.com/...">
+          <div class="question-box">
+            <p>Have you shared your takeaways in the YouTube video's comments?</p>
+            <label class="radio-option"><input type="radio" name="youtubeComment" value="Yes"> Yes, I have</label>
+            <label class="radio-option"><input type="radio" name="youtubeComment" value="Not yet"> Not yet</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="task-section final-section">
+        <div class="final-icon">🔐</div>
+        <p class="eyebrow">FINAL SECURITY CHECK</p>
+        <h2>Ready to Complete the Mission?</h2>
+        <p>Review your answers, then submit your mission. Your text answers are saved on this device automatically.</p>
+        <div class="final-actions">
+          <button type="button" id="saveBtn" class="secondary-btn">💾 Save Progress</button>
+          <button type="button" id="exportBtn" class="secondary-btn">📥 Download Answers</button>
+          <button type="submit" id="completeBtn" class="primary-btn">🚀 Complete Mission</button>
+        </div>
+        <p id="saveStatus" class="save-status" aria-live="polite">Ready when you are, agent.</p>
+      </section>
+    </form>
+  </main>
+
+  <footer>INSIDE INTEL <span>•</span> MISSION 04 <span>•</span> THINK DEEPER. CONNECT BETTER.</footer>
+
+  <div id="celebration" class="celebration hidden" role="dialog" aria-modal="true" aria-labelledby="celebrationTitle">
+    <div class="celebration-card">
+      <div class="celebration-emoji">🏆✨🎉</div>
+      <p class="eyebrow">MISSION STATUS: COMPLETE</p>
+      <h2 id="celebrationTitle">Excellent Work, Agent!</h2>
+      <p>You explored customer psychology and built your IRB bank. Keep your intelligence sharp!</p>
+      <div class="celebration-actions">
+        <button type="button" id="continueBtn" class="primary-btn">Back to Dashboard →</button>
+        <button type="button" id="closeCelebration" class="secondary-btn">Stay Here</button>
+      </div>
+    </div>
+    <div id="confettiLayer" class="confetti-layer"></div>
+  </div>
+
+  <script>
+(function () {
+  // Reset only form answers when the page loads or refreshes.
+  window.addEventListener("pageshow", function () {
+    document.querySelectorAll("form").forEach(function (form) {
+      form.reset();
+    });
+
+    document.querySelectorAll(
+      'input:not([type="button"]):not([type="submit"]):not([type="hidden"]), textarea, select'
+    ).forEach(function (field) {
+      if (field.type === "checkbox" || field.type === "radio") {
+        field.checked = false;
+      } else if (field.tagName === "SELECT") {
+        field.selectedIndex = 0;
+      } else {
+        field.value = "";
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

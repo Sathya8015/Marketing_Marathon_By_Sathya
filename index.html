@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0909">
+  <title>Marketing Marathon | Mission Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="brand" href="#" aria-label="Mission Control home">
+      <span class="brand-seal">M</span>
+      <span>
+        <small>BEE · MARKETING MARATHON</small>
+        <strong>MISSION CONTROL</strong>
+      </span>
+    </a>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      FIVE WEEKS. ONE TRANSFORMATION.
+    </div>
+  </header>
+
+  <main>
+
+    <!-- REGISTRATION PAGE -->
+    <section id="welcomePage" class="welcome-layout">
+      <div class="welcome-copy">
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>Think bigger.<br><span>Execute better.</span></h1>
+
+        <p class="lead">
+          Five missions. One focused journey.
+          Turn your business ideas into a plan of action
+          through the Marketing Marathon.
+        </p>
+
+        <div class="hero-stats">
+          <div><strong>05</strong><span>MISSIONS</span></div>
+          <div><strong>09</strong><span>CREWS</span></div>
+          <div><strong>35</strong><span>DAYS*</span></div>
+        </div>
+
+        <p class="fine-print">
+          *Five-week challenge. Follow the official programme schedule.
+        </p>
+      </div>
+
+      <div class="registration-card">
+        <div class="card-topline">
+          <span>PARTICIPANT DOSSIER</span>
+          <span>NO. 001</span>
+        </div>
+
+        <div class="card-heading">
+          <p class="eyebrow">ACCESS REQUEST</p>
+          <h2>Enter the <em>Marathon.</em></h2>
+          <p>Register your details to enter Mission Control.</p>
+        </div>
+
+        <form id="registrationForm">
+          <div class="form-field">
+            <label for="participantName">Full name</label>
+            <input id="participantName" name="participantName"
+              type="text" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="mobileNumber">Mobile number</label>
+            <input id="mobileNumber" name="mobileNumber"
+              type="tel" inputmode="tel" placeholder="Enter mobile number"
+              required>
+          </div>
+
+          <div class="form-field">
+            <label for="crewSelect">Choose your crew</label>
+            <select id="crewSelect" name="crewSelect" required>
+              <option value="">Select your crew</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="crewLeader">Crew leader</label>
+            <input id="crewLeader" name="crewLeader"
+              type="text" placeholder="Automatically assigned" readonly>
+          </div>
+
+          <button class="gold-button full-width" type="submit">
+            ENTER MISSION CONTROL <span>↗</span>
+          </button>
+
+          <p class="form-note">
+            Your five-week journey begins with one decision.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- MAIN DASHBOARD -->
+    <section id="dashboardPage" class="hidden">
+
+      <div class="welcome-bar">
+        <div>
+          <p class="eyebrow">OPERATIVE IDENTIFIED</p>
+          <h2>Welcome, <span id="displayName">Participant</span></h2>
+          <p id="displayCrew" class="muted"></p>
+        </div>
+
+        <button id="editProfile" class="outline-button" type="button">
+          EDIT PROFILE
+        </button>
+      </div>
+
+      <!-- HERO: TEXT LEFT + LARGE 3D VAULT RIGHT -->
+      <section class="dashboard-hero vault-hero">
+
+        <div class="vault-hero-copy">
+          <p class="eyebrow">THE CHALLENGE STARTS NOW</p>
+
+          <h1>Your strategy.<br>
+            <span>Your next level.</span>
+          </h1>
+
+          <p class="lead">
+            Choose your mission, complete the workbook tasks
+            and track your progress through the five-week challenge.
+          </p>
+
+          <a class="gold-button inline-button" href="#missionSection">
+            EXPLORE MISSIONS ↓
+          </a>
+        </div>
+
+        <!-- LARGE SLEEPING GOLDEN VAULT -->
+        <aside class="strategy-vault-side">
+
+          <p class="vault-status" id="vaultStatus">
+            Zzz... VAULT IS SLEEPING
+          </p>
+
+          <div class="sleeping-vault" id="sleepingVault">
+
+            <div class="vault-shadow"></div>
+
+            <div class="vault-character" id="vaultCharacter">
+
+              <div class="vault-side"></div>
+
+              <div class="vault-face">
+                <div class="vault-top-rim"></div>
+
+                <div class="vault-bolts">
+                  <i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="vault-eyebrows">
+                  <span class="eyebrow eyebrow-left"></span>
+                  <span class="eyebrow eyebrow-right"></span>
+                </div>
+
+                <div class="vault-eyes">
+                  <div class="vault-eye">
+                    <span class="eye-pupil"></span>
+                    <span class="sleepy-lid"></span>
+                  </div>
+
+                  <div class="vault-eye">
+                    <span class="eye-pupil"></span>
+                    <span class="sleepy-lid"></span>
+                  </div>
+                </div>
+
+                <div class="vault-nose"></div>
+
+                <div class="vault-mouth">
+                  <span class="mouth-sleep"></span>
+                  <span class="mouth-awake"></span>
+                </div>
+
+                <div class="vault-wheel">
+                  <div class="wheel-inner">
+                    <div class="wheel-spoke"></div>
+                    <div class="wheel-spoke spoke-two"></div>
+                    <div class="wheel-center"></div>
+                  </div>
+                </div>
+
+                <div class="vault-keyhole"></div>
+                <div class="vault-bottom-rim"></div>
+              </div>
+
+            </div>
+
+            <div class="sleep-z" id="sleepZ">Zzz</div>
+            <div class="vault-sparkle sparkle-one">✦</div>
+            <div class="vault-sparkle sparkle-two">✧</div>
+          </div>
+
+          <p class="vault-caption" id="vaultCaption">
+            Shhh... the Golden Vault is sleeping.
+            Move your mouse to wake it up!
+          </p>
+
+        </aside>
+      </section>
+
+      <!-- MISSION ARCHIVES -->
+      <section id="missionSection" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR FIVE-WEEK JOURNEY</p>
+            <h2>Mission Archives</h2>
+          </div>
+          <span class="section-tag">05 MISSIONS</span>
+        </div>
+
+        <div id="missionGrid" class="mission-grid"></div>
+      </section>
+
+      <!-- CREW HEADQUARTERS -->
+      <section class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR ALLIANCE</p>
+            <h2>Crew Headquarters</h2>
+          </div>
+          <span class="section-tag">09 CREWS</span>
+        </div>
+
+        <div id="crewGrid" class="crew-grid"></div>
+      </section>
+
+    </section>
+
+    <!-- MISSION / CREW DETAILS -->
+    <section id="detailPage" class="detail-panel hidden"
+      aria-live="polite">
+
+      <button id="backButton" class="outline-button" type="button">
+        ← BACK TO MISSION CONTROL
+      </button>
+
+      <div id="detailContent"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>BEE · MARKETING MARATHON</span>
+    <span>STRATEGY · EXECUTION · GROWTH</span>
+  </footer>
+
+  <!-- EXISTING MAIN DASHBOARD SCRIPT -->
+  <script src="script.js"></script>
+
+  <!-- GOLDEN KEY VAULT GAME -->
+  <div id="vaultGame" class="vault-game hidden">
+
+    <div class="vault-game-header">
+      <p class="vault-eyebrow">FINAL CHALLENGE UNLOCKED</p>
+      <h1>THE GOLDEN KEY</h1>
+      <p>Move your golden key to the vault and unlock your destiny.</p>
+    </div>
+
+    <div class="game-vault-area">
+      <div id="gameVault" class="game-vault">
+        <div class="vault-rim"></div>
+
+        <div class="vault-door">
+          <div class="vault-inner-ring"></div>
+          <div class="vault-bolts"></div>
+
+          <div class="vault-brand">
+            <span>THE</span>
+            <strong>MARATHON VAULT</strong>
+          </div>
+
+          <button type="button" id="vaultKeyhole"
+            class="vault-keyhole"
+            aria-label="Unlock the vault using the golden key">
+            <span class="keyhole-glow"></span>
+            <span class="keyhole-shape"></span>
+          </button>
+
+          <p class="vault-instruction" id="vaultInstruction">
+            INSERT THE GOLDEN KEY
+          </p>
+
+          <div class="vault-handle"></div>
+        </div>
+      </div>
+    </div>
+
+    <p id="vaultGameMessage" class="vault-game-message">
+      Your missions are complete. The final challenge awaits.
+    </p>
+
+    <button id="vaultExitButton" class="vault-exit-button" type="button">
+      RETURN TO DASHBOARD
+    </button>
+
+    <div id="vaultVictory" class="vault-victory hidden">
+      <p class="vault-eyebrow">MISSION ACCOMPLISHED</p>
+      <h2>YOU UNLOCKED THE VAULT!</h2>
+      <p>Every mission led you here. Your journey is complete.</p>
+
+      <button id="vaultVictoryButton" type="button">
+        CLAIM YOUR VICTORY ✦
+      </button>
+    </div>
+
+  </div>
+
+  <!-- GOLDEN KEY CURSOR -->
+  <div id="goldenKeyCursor" aria-hidden="true">
+    <span>🗝️</span>
+  </div>
+
+  <!-- VAULT GAME SCRIPT -->
+  <script src="vault-game.js"></script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+
+      if (params.get("vault") === "1") {
+        if (typeof window.startVaultGame === "function") {
+          window.startVaultGame();
+        }
+      }
+    });
+  </script>
+
+  <!-- SLEEPING VAULT ANIMATION -->
+  <script src="sleeping-vault.js"></script>
+
+  <script>
+(function () {
+  // Reset only form answers when the page loads or refreshes.
+  window.addEventListener("pageshow", function () {
+    document.querySelectorAll("form").forEach(function (form) {
+      form.reset();
+    });
+
+    document.querySelectorAll(
+      'input:not([type="button"]):not([type="submit"]):not([type="hidden"]), textarea, select'
+    ).forEach(function (field) {
+      if (field.type === "checkbox" || field.type === "radio") {
+        field.checked = false;
+      } else if (field.tagName === "SELECT") {
+        field.selectedIndex = 0;
+      } else {
+        field.value = "";
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

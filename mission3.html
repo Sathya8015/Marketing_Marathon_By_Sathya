@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission 03 | Activate the Crew</title>
+  <link rel="stylesheet" href="mission3.css">
+  <script src="mission3.js" defer></script>
+</head>
+<body>
+    <!-- Mission Character -->
+<div class="character-container">
+  <img
+    src="character-3d.png"
+    alt="Mission Character"
+    class="character-image"
+  >
+</div>
+  <audio id="backgroundMusic" loop>
+    <source src="money-heist.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-seal">M</span>
+      <span><small>BEE · MARKETING MARATHON</small>
+      <strong>MISSION 03</strong></span>
+    </a>
+    <button id="musicToggle" class="music-toggle" type="button">
+      🎵 MUSIC: OFF
+    </button>
+  </header>
+
+  <main>
+    <section id="introScreen" class="intro">
+      <p class="eyebrow">MISSION 03 · TRAFFIC ACTIVATION</p>
+      <h1>Activate the Crew.<br><span>Unlock Your Goldmine.</span></h1>
+      <p class="lead">
+        Discover the value in your existing contacts, rebuild relationships,
+        activate your network and create your 21-day SIT plan.
+      </p>
+      <div class="stats">
+        <div><strong>05</strong><span>CHALLENGES</span></div>
+        <div><strong>21</strong><span>DAYS OF ACTION</span></div>
+        <div><strong>01</strong><span>GOLDMINE</span></div>
+      </div>
+      <button id="startButton" class="gold-button" type="button">
+        START MISSION 03 ↗
+      </button>
+    </section>
+
+    <section id="missionScreen" class="hidden">
+      <div class="mission-heading">
+        <div>
+          <p class="eyebrow">OPERATIVE WORKBOOK</p>
+          <h1>Activate the <span>Crew</span></h1>
+          <p class="lead">Complete all five challenges to finish your mission.</p>
+        </div>
+        <div class="progress-card">
+          <span>MISSION PROGRESS</span>
+          <strong id="progressText">0 / 5 COMPLETE</strong>
+          <div class="progress-track"><div id="progressFill"></div></div>
+        </div>
+      </div>
+
+      <div id="taskList" class="task-list"></div>
+
+      <section id="finale" class="finale hidden">
+        <div class="vault-mark">✦</div>
+        <p class="eyebrow">MISSION ACCOMPLISHED</p>
+        <h2>Traffic Activated.</h2>
+        <p>You completed Mission 03. Keep nurturing your network and following your SIT plan.</p>
+        <button id="replayButton" class="outline-button" type="button">
+          REVIEW MISSION
+        </button>
+        <a class="gold-button" href="index.html">
+          RETURN TO MISSION CONTROL ↗
+        </a>
+      </section>
+    </section>
+  </main>
+
+  <div class="character-container">
+    <img src="character-3d.png" alt="Mission character" class="character-image">
+  </div>
+
+  <footer>
+    <span>BEE · MARKETING MARATHON</span>
+    <span>STRATEGY · RELATIONSHIPS · GROWTH</span>
+  </footer>
+  <script>
+(function () {
+  // Reset only form answers when the page loads or refreshes.
+  window.addEventListener("pageshow", function () {
+    document.querySelectorAll("form").forEach(function (form) {
+      form.reset();
+    });
+
+    document.querySelectorAll(
+      'input:not([type="button"]):not([type="submit"]):not([type="hidden"]), textarea, select'
+    ).forEach(function (field) {
+      if (field.type === "checkbox" || field.type === "radio") {
+        field.checked = false;
+      } else if (field.tagName === "SELECT") {
+        field.selectedIndex = 0;
+      } else {
+        field.value = "";
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

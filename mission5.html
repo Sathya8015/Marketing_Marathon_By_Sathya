@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission 5 | Unlock the Vault</title>
+  <link rel="stylesheet" href="mission5.css">
+  <script src="mission5.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a href="index.html" class="back-link">← MAIN SHEET</a>
+    <div class="brand"><span class="brand-icon">◆</span> BEE <span>MISSION CONTROL</span></div>
+    <button id="musicToggle" class="sound-button" type="button">♫ SOUND: OFF</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="mission-tag"><span class="pulse"></span> CLASSIFIED MISSION 05</div>
+      <div class="vault-scene" aria-hidden="true">
+        <div class="vault-ring ring-one"></div>
+        <div class="vault-ring ring-two"></div>
+        <div class="vault-door">
+          <div class="vault-inner">
+            <div class="vault-wheel"><span></span></div>
+            <div class="vault-center">4C</div>
+          </div>
+          <i class="bolt bolt-one"></i>
+          <i class="bolt bolt-two"></i>
+          <i class="bolt bolt-three"></i>
+          <i class="bolt bolt-four"></i>
+        </div>
+        <div class="vault-glow"></div>
+      </div>
+      <p class="eyebrow">THE FINAL SALES PROTOCOL</p>
+      <h1>UNLOCK <span>THE VAULT</span></h1>
+      <p class="hero-description">
+        Understand your customer. Build authority. Deliver value.
+        Connect the dots. Close with confidence.
+      </p>
+      <div class="mission-stats">
+        <div><strong>06</strong><span>CHAPTERS</span></div>
+        <div><strong id="answeredStat">00</strong><span>ANSWERS SAVED</span></div>
+        <div><strong id="progressStat">00%</strong><span>PROGRESS</span></div>
+      </div>
+    </section>
+
+    <section class="progress-panel">
+      <div class="progress-heading">
+        <div><span class="eyebrow">MISSION PROGRESS</span><h2 id="progressHeading">The vault awaits your strategy.</h2></div>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-track"><div id="progressFill"></div></div>
+      <div class="progress-caption"><span>MISSION START</span><span>VAULT UNLOCK</span></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="chapter-panel">
+        <p class="eyebrow">MISSION CHAPTERS</p>
+        <nav id="chapterNav" class="chapter-nav" aria-label="Mission sections"></nav>
+        <div class="save-indicator"><span class="save-dot"></span><span id="saveStatus">Progress saved locally</span></div>
+      </aside>
+
+      <section class="content-panel">
+        <div class="section-heading">
+          <div>
+            <p id="sectionNumber" class="eyebrow">CHAPTER 01 / 06</p>
+            <h2 id="sectionTitle">Understanding Your Customer</h2>
+            <p id="sectionDescription"></p>
+          </div>
+          <span id="sectionBadge" class="section-badge">01</span>
+        </div>
+
+        <div id="questionContainer"></div>
+
+        <div class="section-actions">
+          <button id="previousButton" class="secondary-button" type="button">← Previous</button>
+          <span id="sectionCount">Section 1 of 6</span>
+          <button id="nextButton" class="primary-button" type="button">Save & Continue →</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="finale" class="finale hidden">
+      <div class="finale-emblem">✦</div>
+      <p class="eyebrow">MISSION REPORT</p>
+      <h2>THE VAULT IS <span>UNLOCKED</span></h2>
+      <p>Your 4C Sales in Action workbook is ready. Review your answers or export your mission report.</p>
+      <div class="finale-stats">
+        <div><strong id="finalAnswered">0</strong><span>ANSWERS SAVED</span></div>
+        <div><strong>4C</strong><span>SALES FRAMEWORK</span></div>
+      </div>
+      <div class="finale-actions">
+        <button id="downloadButton" class="primary-button" type="button">↓ Download My Answers</button>
+        <button id="reviewButton" class="secondary-button" type="button">Review Answers</button>
+      </div>
+      <p class="privacy-note">Your answers are stored in this browser. They are not automatically sent to the BEE team or your captain.</p>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  
+  <div id="celebration" class="celebration hidden" aria-hidden="true"></div>
+
+<!-- Magical Key Unlock Animation -->
+<div id="magicKeyScene" class="magic-key-scene hidden">
+  <div class="magic-flash"></div>
+
+  <div class="magic-message">
+    <span>MISSION COMPLETED</span>
+    <h2>THE MAGIC KEY IS YOURS</h2>
+    <p>You have earned the key to unlock the vault.</p>
+  </div>
+
+  <div id="magicKey" class="magic-key">
+    <div class="key-head">
+      <div class="key-hole"></div>
+    </div>
+    <div class="key-stem"></div>
+    <div class="key-tooth tooth-one"></div>
+    <div class="key-tooth tooth-two"></div>
+    <div class="key-glow"></div>
+  </div>
+
+  <div class="magic-particles" id="magicParticles"></div>
+
+  <button id="magicContinue" class="magic-continue">
+    ENTER THE VAULT ✦
+  </button>
+</div>
+<script>
+(function () {
+  // Reset only form answers when the page loads or refreshes.
+  window.addEventListener("pageshow", function () {
+    document.querySelectorAll("form").forEach(function (form) {
+      form.reset();
+    });
+
+    document.querySelectorAll(
+      'input:not([type="button"]):not([type="submit"]):not([type="hidden"]), textarea, select'
+    ).forEach(function (field) {
+      if (field.type === "checkbox" || field.type === "radio") {
+        field.checked = false;
+      } else if (field.tagName === "SELECT") {
+        field.selectedIndex = 0;
+      } else {
+        field.value = "";
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
